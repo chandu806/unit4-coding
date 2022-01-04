@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #logo {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #logo > div {
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+        }
+        .block{
+            height:330px;
+            display:flex;
+            background-color: black;
+            flex-direction: row;
+            /*flex-wrap:wrap ;*/
+            justify-content: center;
+            padding-top: 20px;
+            /*margin:20px;*/
+        }
+        .img{
+            height: 250px;
+            width: 250px;
+            margin:20px;
+        }
+       
+        .flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .del{
+            margin: 20px;;
+        }
+        .town{
+            display: flex;
+            padding-left: 110px;  
+           flex-wrap: wrap;
+            width:1000px;
+            justify-content: space-between;
+            
+        }
+        .town{
+            display: grid;
+            grid-template-columns: repeat(4,29%);
+            grid-template-rows: repeat(auto, 450px);
+            grid-gap: 40px;
+        }
+        .resDiv{
+            margin-top: 10px;
+            border: 1px solid black;
+
+        }
+        .resDiv > div > img {
+            width:100%;
+            height: 50%;
+        }
+        .resDiv > h4,p {
+            padding: 10px;
+            line-height: 5px;
+        }
+        .scroller {
+            width: 90%;
+            height: 90%;
+            overflow-x: scroll;
+            overflow-y: scroll;
+            scrollbar-width:inherit
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="scroller">
+    <div id="logo">
+        <!--<img src="https://www.swiggy.com/"/>
+        <div>Location</div>-->
+        <img src="https://s.yimg.com/fz/api/res/1.2/2KjfDYlEuo4tW.GErNN7OA--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/9c23b44b-6f2f-3357-aa28-21dc05494cd6/t_500x300" style="width: 80px;height: 80px;" alt="">
+        <div>
+            <h2>Search</h2>
+            <h2>Offers</h2>
+            <h2>Sign in</h2>
+            <h2>Help</h2>
+            <h2>Cart</h2>
+        </div>
+
+        
+    </div>
+    <div class="block">
+        
+        <div><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/ouuyembnga46m5570ntf" class="img"/> </div>
+        <div><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/n99mgmoagsgds0sxh4ur" class="img"/></div>
+        <div><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/omhjfsrgi5fjkg81ivhj" class="img"/></div>
+        <div><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/gtr2vkiqd6aqckt1qaym" class="img"/></div>
+
+    </div>
+    <div class="flex">
+        <h2 style=" padding-left: 100px;padding-right:100px">138 restaurants</h2>
+        <p class="del">Relevance</p>
+        <p class="del">Delivery time</p>
+        <p class="del">Rating</p>
+        <p class="del" >cost:Low To High</p>
+        <p class="del" style="padding-right: 100px;;">High To Low</p>
+    </div>
+    <div style="width:1300px; height:0.1px; border: 0.1px solid black; margin: auto;"></div>
+    <div class="town">
+        <div class="resDiv" >
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant10.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        <div class="resDiv">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant2.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+
+        </div>
+        <div class="resDiv">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant3.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        <div class="resDiv">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant4.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        <div class="resDiv">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant5.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        <div class="resDiv">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant10.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+
+        </div>
+        <div class="resDiv">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant10.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        <div class="resDiv"">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant10.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        <div class="resDiv" >
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant10.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        <div class="resDiv">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant10.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        <div class="resDiv">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant10.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        <div class="resDiv">
+            <div><img src="https://github.com/riteshf/files/blob/main/restaurant10.jpeg?raw=true" class="foodimage"/></div>
+            <h4>chennuru Dum Biryani</h4>
+            <p>Biryani</p>
+            <hr>
+            <p>60%off | Use TRYNEW</p>
+        </div>
+        
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 300px;
+            width: 400px;
+            margin: auto;
+            border: 1px solid black;
+            padding-left: 20px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+        .form{
+            height:50px;
+            width:250px;
+            padding-left: 20px;
+            text-align: center;
+            font-size: 18px;
+           
+        }
+        .quick{
+            width:300px;
+            height: 60px;
+        }
+        /* #main > div{
+            width: 400px;
+            height: 400px;
+            border: 1px solidblack;
+            margin-top: 30px;
+            background-color: violet;
+            
+        } */
+
+        @media only screen and (max-width: 1200px) {
+            #page{
+                margin-top: 100px;
+                display: grid;
+                grid-template-columns: repeat(3,300px);
+                grid-template-rows:repeat(3,300px) ;
+                grid-gap:16px;
+                
+            }
+            #page > div{
+                border: 1px solid black;
+                padding:20px;
+    
+            }
+             
+        }
+        @media only screen and (max-width: 600px) {
+            #page{
+                margin-top: 100px;
+                display: grid;
+                grid-template-columns: repeat(1,300px);
+                grid-template-rows:repeat(1,300px) ;
+                grid-gap:16px;
+                
+            }
+            #page > div{
+                border: 1px solid icd black;
+                padding:20px;
+    
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="form">
+        <form>
+            <input type="text" id="course" placeholder="Add Course" class="form" ">
+            <div style="height: 20px;"></div>
+            <input type="text" id="coursedetails" placeholder="Add course details" class="form">
+        </form>
+        <button onclick="submitform(event)" class="quick">ADD</button>
+    </div>
+    <!-- <div id="main">
+        <div>
+            <h1>Course</h1>
+            <p>Description</p>
+            <button style="display: inline-block; font-size:25px">Details</button>
+            <button style="display: inline-block; font-size: 25px;">Apply</button>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div> -->
+    <div id ="page"></div>
+</body>
+</html>
+<script>
+    var main=document.getElementById('page')
+    function submitform(event){
+        event.preventDefault();
+        var course=document.getElementById("course").value;
+        var coursedetails=document.getElementById("coursedetails").value
+        
+        var div=document.createElement('div')
+        var H=document.createElement('h1')
+        H.textContent=course;
+        var pg=document.createElement("p")
+        pg.textContent=coursedetails;
+        
+    
+        var inform=document.createElement('button')
+        inform.textContent= 'inform'
+        var apply = document.createElement('button')
+        apply.textContent= "apply"
+    
+        div.append(H,pg,inform,apply)
+        page.append(div)
+
+
+    }
+
+
+</script>
+
+
+
+
+
+

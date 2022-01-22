@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inputbox{
+            height: 50px;
+            width: 300px;
+            margin-top: -30px;
+            /* margin: auto; */
+            /* padding:auto;
+            justify-content: center;
+            align-items: center; */
+        }
+        #check{
+            height: 30px;
+            /* margin: auto; */
+            width: 30px;
+            margin-top: 50px;
+        }
+        .container{
+            width: 400px;
+            margin: auto;
+            /* align-items: center; */
+        }
+        #button{
+          width: 100px;
+          height: 50px;
+          margin: auto;
+          margin-top: 20px;
+          margin-left: 80px;
+          border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" name="" id="inputbox">
+        <!-- <div> -->
+            <input type="checkbox" name="" id="check">
+
+        <!-- </div> -->
+        
+        <button id="button" onclick="subscribe()">Add</button>
+        <!-- <butoon id="button" onclick="subscribe()">Add</butoon> -->
+    </div>
+    <div id="key"></div>
+</body>
+</html>
+<script>
+    //   let store = JSON.parse(localStorage.getItem("matter")) || []
+    async function subscribe(){
+        let input=document.getElementById("inputbox").value;
+        let sub=document.getElementById("check").checked;
+        // let link="https://json-server-mocker-masai.herokuapp.com/tasks"
+       
+        var obj={
+            // "id":1,
+            // "title":"new",
+            // "status":true,
+           
+            title: document.getElementById("inputbox").value,
+            status: document.getElementById("check").checked,
+            
+        }
+        obj=JSON.stringify(obj)
+        
+        let request = await fetch("https://json-server-mocker-masai.herokuapp.com/tasks",{
+            method: "POST",
+            body:obj,
+            headers:{
+                "Content-type" : "application/json"
+
+            }
+        })
+        let matter = await request.json()
+        console.log("obj:",matter)
+
+
+        // store.push(obj)
+        // localStorage.setItem("matter",JSON.stringify(store))
+
+        // let key=document.getElementById("key");
+        
+        // key.append(input)
+        
+
+    }
+
+
+
+    // function subscribe(){
+    //     let input=document.getElementById("inputbox").value;
+    //     let sub=document.getElementById("check").checked;
+    //     let link="https://json-server-mocker-masai.herokuapp.com/tasks"
+    //     let request=await fetch(link)
+    //     let matter = await request.json()
+    //     let obj={
+    //         // "id":1,
+    //         // "title":"new",
+    //         // "status":true,
+    //         id:1,
+    //         title:input,
+    //         status:true,
+            
+    //     }
+    //     store.push(obj)
+    //     localStorage.setItem("matter",JSON.stringify(store))
+
+    //     let key=document.getElementById("key");
+    //     // key.textContent=input
+    //     key.append(input)
+        
+
+    // }
+
+   
+    
+
+
+</script>
